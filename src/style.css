@@ -124,6 +124,11 @@
     width: 12rem;
     height: 12rem;
     border: 1px solid #8a5666;
+    cursor: pointer;
+}
+.item:hover{
+    transform: scale(1.1);
+	transition: 0.5s;
 }
 .container button{
     display: none;
