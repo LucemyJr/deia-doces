@@ -200,16 +200,15 @@
 .modal{
     position: relative;
     background-color: #fff;
-    width: 40%;
-    height: 85%;
+    width: 35%;
+    height: 75%;
     padding: 1rem;
     border: 5px solid #F082A5;
     box-shadow: 0 0 0 5px #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 3rem;
 }
 .closeModal-btn{
     position: absolute;
@@ -229,11 +228,13 @@
 }
 .modal-tittle{
     text-align: center;
-    font-size: 2rem;
+    font-size: 3.4rem;
+    color: #eb7da0;
+    text-shadow: 2px 3px rgba(128, 128, 128, 0.5);
 }
 .modal-gallery{
-    width: 24rem;
-    height: 30rem;
+    width: 27rem;
+    height: 33rem;
     position: relative;
     overflow: hidden;
     border: 4px solid #9F9F9F;
@@ -268,7 +269,9 @@
 
 @media (max-width: 600px){
     .modal{
+        justify-content: center;
         background-color: #fff;
+        gap: 1.5rem;
         width: 80%;
         height: 60%;
         padding: 0;
