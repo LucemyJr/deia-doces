@@ -182,7 +182,84 @@
     color: #fff;
     
 }
-
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container.show{
+    display: none;
+}
+.modal{
+    position: relative;
+    background-color: #fff;
+    width: 40%;
+    height: 85%;
+    padding: 1rem;
+    border: 5px solid #F082A5;
+    box-shadow: 0 0 0 5px #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.closeModal-btn{
+    position: absolute;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    top: -20px;
+    right: -20px; 
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 1.2rem;
+    border: 4px solid #fff;
+    background-color: #F082A5;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+.modal-tittle{
+    text-align: center;
+    font-size: 2rem;
+}
+.modal-gallery{
+    width: 24rem;
+    height: 30rem;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #9F9F9F;
+    border-radius: 5px;
+}
+.modal-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation-name: animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.modal-img:nth-child(1){
+    animation-delay: 0s;
+}
+.modal-img:nth-child(2){
+    animation-delay: 5s;
+}
+.modal-img:nth-child(3){
+    animation-delay: 10s;
+}
+.modal-img:nth-child(4){
+    animation-delay: 15s;
+}
 /*MOBILE*/
 
 #btn-mobile{
@@ -190,6 +267,22 @@
 }
 
 @media (max-width: 600px){
+    .modal{
+        background-color: #fff;
+        width: 80%;
+        height: 60%;
+        padding: 0;
+    }
+    .modal-tittle{
+        font-size: 1.6rem;
+    }
+    .modal-gallery{
+        width: 12rem;
+        height: 16rem;
+        padding-bottom: 1.3rem;
+    }
+    
+    
     .header{
         justify-content: space-between;
     }
@@ -298,5 +391,15 @@
     #nav.active #hamburguer::after{
         transform: rotate(-135deg);
         top: -0.4375rem;
+    }
+}
+
+@keyframes animation{
+    25%{
+        opacity: 1;
+        transform: scale(1.1,1.1);
+    }
+    50%{
+        opacity: 0;
     }
 }
